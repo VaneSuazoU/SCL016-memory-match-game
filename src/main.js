@@ -1,10 +1,10 @@
-import { App, gamePageEasy, gamePageMedium, gamePageHard, congratsPage } from './components/App.js';
+import { App, gamePage, congratsPage } from './components/App.js';
 import pokemon from '../data/pokemon/pokemon.js';
 
 
 document.getElementById('root').appendChild(App());
 
-let buttonToEasy = document.querySelector('#easy');
+/* let buttonToEasy = document.querySelector('#easy');
 buttonToEasy.addEventListener("click", function () {
 
     document.querySelector('#root').style.display = "none";
@@ -45,4 +45,21 @@ buttonToHard.addEventListener("click", function () {
 
     document.querySelector('#root').style.display = "none";
 
-});
+}); */
+let dificultades = document.getElementsByClassName('difficulty');
+for (let i = 0; i < dificultades.length; i++) {
+  dificultades[i].addEventListener('click', (event) => {
+    switch (event.target.id) {
+      case "easy":
+        console.log("easy");
+        break;
+      case "medium":
+        console.log("medium");
+        break;
+      case "hard":
+      default:
+        console.log("hard");
+        break;
+    }
+  })
+}

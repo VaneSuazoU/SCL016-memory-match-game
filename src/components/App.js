@@ -11,37 +11,20 @@ const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
-  el.innerHTML = '<img src="./resources/pokemon.png" alt="Logo Pokemon" id="logo"><h1>Memorice</h1><h2>¿Estás listo para ser un entrenador Pokemón?</h2><h3>Selecciona con cuántos pares quieres jugar</h3><div id="difficulty"><img src="./resources/pokeball.png" alt="Tres pares de cartas" id="easy"><img src="./resources/superball.png" alt="Seis pares de cartas" id="medium"><img src="./resources/superball1.png" alt="Nueve pares de cartas" id="hard"></div>';
-  
+  el.innerHTML = '<img src="./resources/pokemon.png" alt="Logo Pokemon" id="logo"><h1>Memorice</h1><h2>¿Estás listo para ser un entrenador Pokemón?</h2><h3>Selecciona con cuántos pares quieres jugar</h3><div class="difficulty"><img src="./resources/pokeball.png" alt="Tres pares de cartas" class="dificultad" id="easy"><img src="./resources/superball.png" alt="Seis pares de cartas"  class="dificultad" id="medium"><img src="./resources/ultraball.png" alt="Nueve pares de cartas"  class="dificultad" id="hard"></div><footer><img id="img-footer" src="./resources/ash.gif" alt=""></footer>';
+
   return el;
 };
 
-const gamePageEasy = () => {
+const gamePage = () => {
   const el = document.createElement('div');
 
-  el.className = 'gamePageEasy';
+  el.className = 'gamePage';
   el.innerHTML =  '';
 
   return el;
 };
 
-const gamePageMedium = () => {
-  const el = document.createElement('div');
-
-  el.className = 'gamePageMedium';
-  el.innerHTML =  '';
-
-  return el;
-};
-
-const gamePageHard = () => {
-  const el = document.createElement('div');
-
-  el.className = 'gamePageHard';
-  el.innerHTML =  '';
-
-  return el;
-};
 const congratsPage = () => {
   const el = document.createElement('div');
 
@@ -53,4 +36,4 @@ const congratsPage = () => {
 
 
 
-export { App, gamePageEasy, gamePageMedium, gamePageHard, congratsPage };
+export { App, gamePage, congratsPage };

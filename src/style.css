@@ -3,11 +3,12 @@ body {
     background-image: url(./resources/background.png);
     background-position: center;
     background-repeat: no-repeat;
-    height: 108rem;
+    
 }
 #logo {
     display: block;
     margin: auto;
+    width: 60%;
 }
 h1 {
     font-family: VT323;
@@ -23,11 +24,14 @@ h2, h3 {
     text-shadow: 3px 3px lightcyan;
     text-align: center;
 }
-#difficulty {
+.difficulty {
     justify-content: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+.buttonLevels { 
+    width: 10%;
 }
 
 #easy, #medium, #hard {
@@ -37,6 +41,9 @@ h2, h3 {
 #congrats-page {
     display: none;
 }
-#footer {
-    display: none;
+#img-footer {
+    width: 35%;
+}
+.card-upside {
+    width: 25%;
 }
