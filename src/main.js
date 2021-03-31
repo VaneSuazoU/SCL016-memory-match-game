@@ -10,18 +10,18 @@ for (let i = 0; i < dificultades.length; i++) {
     switch (event.target.id) {
       case "easy":
         document.querySelector('#root').style.display = "none";
-        document.querySelector('#gamePage').style.display = "block";
+        document.querySelector('#gamePage').style.display = "table";
         gamePage();
         break;
       case "medium":
         document.querySelector('#root').style.display = "none";
-        document.querySelector('#gamePage').style.display = "block";
+        document.querySelector('#gamePage').style.display = "table";
         gamePage();
         break;
       case "hard":
       default:
         document.querySelector('#root').style.display = "none";
-        document.querySelector('#gamePage').style.display = "block";
+        document.querySelector('#gamePage').style.display = "table";
         gamePage();
         break;
     }

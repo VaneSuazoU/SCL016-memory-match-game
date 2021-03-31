@@ -4,7 +4,9 @@ const App = () => {
   const el = document.createElement('div');
 
   el.className = 'initPage';
-  el.innerHTML = '<img src="./resources/pokemon.png" alt="Logo Pokemon" id="logo"><h1>Memorice</h1><h2>¿Estás listo para ser un entrenador Pokemón?</h2><h3>Selecciona con cuántos pares quieres jugar</h3><div class="difficulty"><img src="./resources/pokeball.png" alt="Tres pares de cartas" class="dificultad" id="easy"><img src="./resources/superball.png" alt="Seis pares de cartas" class="dificultad" id="medium"><img src="./resources/ultraball.png" alt="Nueve pares de cartas" class="dificultad" id="hard"></div><div><img src="./resources/ash.gif" alt="" id="img-footer"></div>';
+
+  el.innerHTML = '<img src="./resources/pokemon.png" alt="Logo Pokemon" class="logo"><img src="./resources/Memorice.png" alt="Logo Pokemon" id="memorice"><img src="./resources/trainer.png" alt="Logo Pokemon" id="entrenador"><img src="./resources/select.png" alt="Logo Pokemon" id="select"><div class="difficulty"><img src="./resources/pokeball.png" alt="Tres pares de cartas" class="dificultad" id="easy"><img src="./resources/superball.png" alt="Seis pares de cartas" class="dificultad" id="medium"><img src="./resources/ultraball.png" alt="Nueve pares de cartas" class="dificultad" id="hard"></div><div><img src="./resources/ash.gif" alt="" id="img-footer"></div>';
+
 
   return el;
 }
@@ -13,9 +15,10 @@ const gamePage = () => {
 
    /* Genera el titulo y el boton de inicio */
   let node1 = document.querySelector('#pokemonCards');
-  let text = document.createElement("h1");
-  text.textContent = "¡Voltea las cartas para encontrar pares de tus Pokemones favoritos!";
-  node1.appendChild(text);
+  let title = document.createElement("img");
+  title.src = "./resources/voltearcartas.png";
+  title.className = "titulo";
+  node1.appendChild(title);
 
   let playAgain = document.getElementById('toInit1');
    playAgain.addEventListener('click', () =>{
@@ -125,7 +128,8 @@ const gamePage = () => {
     }, 1500);
   }
 
-  /* Hace reset del tablero cada vez que inicia el juego */
+  /* Hace reset del tablero cada vez que hay disable o unflip */
+
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -137,19 +141,5 @@ const gamePage = () => {
   }, 500);
 }; 
 
-
-/* const congratsPage = () => {
-  const el = document.createElement('div');
-
-  el.className = 'congratsPage';
-  el.innerHTML = '<img src="./resources/congrats.png" alt="" id="celebrate3"><img src="./resources/celebrate.gif" alt="Pokemones celebrando victoria" id="celebrate1"><button id="toInit">Inicio</button>';
-
-  let playAgain = document.getElementById('toInit');
-  playAgain.addEventListener('click', () => {
-    location.reload();
-  });
-
-  return el;
-}; */
 
 export { App, gamePage };

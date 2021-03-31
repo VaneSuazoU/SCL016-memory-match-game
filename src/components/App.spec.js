@@ -17,7 +17,9 @@ describe('gamePage', () => {
 
 describe('gamePage', () => {
   it('should render without crashing', () => {
-    const el = gamePage();
-    expect(el instanceof HTMLElement).toBe(true);
+
+    const node1 = gamePage();
+    expect(node1 instanceof HTMLElement).toBe(true);
   });
 });
+
