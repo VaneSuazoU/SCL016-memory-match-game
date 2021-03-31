@@ -3,8 +3,8 @@ import {App , gamePage } from './App.js';
 
 describe('App', () => {
   it('should render without crashing', () => {
-    const el = App();
-    expect(el instanceof HTMLElement).toBe(true);
+    const initContent = App();
+    expect(initContent instanceof HTMLElement).toBe(true);
   });
 });
 
@@ -17,9 +17,7 @@ describe('gamePage', () => {
 
 describe('gamePage', () => {
   it('should render without crashing', () => {
-
     const node1 = gamePage();
     expect(node1 instanceof HTMLElement).toBe(true);
   });
 });
-
