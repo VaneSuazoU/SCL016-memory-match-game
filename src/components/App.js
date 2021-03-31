@@ -97,7 +97,7 @@ const gamePage = () => {
     if (isMatch === true) {
       correct += 1;
     }
-    if (correct === 1) {
+    if (correct === 9) {
       document.querySelector('#gamePage').style.display = "none";
       document.querySelector('#congratsPage').style.display = "block";
       let toCongratsPage = document.querySelector('#congratsPage');
